@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
-	//implements Serializable é para transforma os objetos em cadeia de Bits, assim podendo
-	//trafegar na rede, pode ser gravado em arquivos
-	
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
@@ -15,7 +12,7 @@ public class User implements Serializable {
 	private String phone;
 	private String password;
 
-//=========================================================
+//===============================================================
 //construct
 
 	public User() {
@@ -31,8 +28,9 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-//=========================================================
+//=================================================================
 //getters e setters
+
 	public Long getId() {
 		return id;
 	}
@@ -73,8 +71,9 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-//=========================================================
-//hashcode and equals
+//==================================================================
+//hashcode e equals
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -99,4 +98,5 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
+
 }
